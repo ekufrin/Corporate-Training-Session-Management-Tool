@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Training Application</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">Welcome</string>
+    <string name="user_name">User Name</string>
+    <string name="unread_notifications">Unread Notifications</string>
+    <string name="mark_as_read">Mark as read</string>
+    <string name="no_unread_notifications">No unread notifications</string>
+</resources>

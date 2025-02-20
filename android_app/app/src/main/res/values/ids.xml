@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nameTextView" type="id" />
+    <item name="dateTextView" type="id" />
+    <item name="durationTextView" type="id" />
+    <item name="locationTextView" type="id" />
+    <item name="statusTextView" type="id" />
+    <item name="participantsTextView" type="id" />
+    <item name="messageTextView" type="id" />
+    <item name="markAsReadButton" type="id" />
+</resources>
