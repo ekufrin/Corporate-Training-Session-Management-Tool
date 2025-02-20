@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.ekufrin.training.controller.DashboardController">
+   <children>
+      <GridPane prefHeight="600.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="241.59999389648436" minHeight="10.0" prefHeight="171.8000061035156" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="344.9999755859375" minHeight="10.0" prefHeight="206.3999755859375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="203.59998168945316" minHeight="0.0" prefHeight="35.99995117187501" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="188.000048828125" minHeight="10.0" prefHeight="188.000048828125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <fx:include source="menuBar.fxml" GridPane.valignment="TOP" />
+            <Text fx:id="welcomeNameText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Dubai Bold" size="21.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="timeText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Dubai Regular" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="70.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="roleText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Dubai Regular" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="60.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Active sessions" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Dubai Bold" size="17.0" />
+               </font>
+            </Text>
+            <StackPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="sessionsTableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="idSessionTableColumn" editable="false" prefWidth="44.800018310546875" resizable="false" style="-fx-alignment: CENTER;" text="ID" />
+                      <TableColumn fx:id="nameSessionTableColumn" editable="false" prefWidth="105.60000610351562" style="-fx-alignment: CENTER;" text="Name" />
+                        <TableColumn fx:id="dateTimeSessionTableColumn" editable="false" prefWidth="108.79998779296875" style="-fx-alignment: CENTER;" text="Date &amp; Time" />
+                        <TableColumn fx:id="durationSessionTableColumn" editable="false" prefWidth="99.20001220703125" resizable="false" style="-fx-alignment: CENTER;" text="Duration (min)" />
+                        <TableColumn fx:id="trainerSessionTableColumn" editable="false" prefWidth="93.60003662109375" resizable="false" style="-fx-alignment: CENTER;" text="Trainer" />
+                        <TableColumn fx:id="participantsSessionTableColumn" editable="false" prefWidth="75.20001220703125" resizable="false" style="-fx-alignment: CENTER;" text="Participants" />
+                        <TableColumn fx:id="maxParticipantsSessionTableColumn" editable="false" prefWidth="102.39996337890625" resizable="false" style="-fx-alignment: CENTER;" text="Max participants" />
+                        <TableColumn fx:id="locationSessionTableColumn" editable="false" prefWidth="84.800048828125" resizable="false" style="-fx-alignment: CENTER;" text="Location" />
+                        <TableColumn fx:id="statusSessionTableColumn" editable="false" prefWidth="84.800048828125" resizable="false" style="-fx-alignment: CENTER;" text="Status" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="sessionsContextMenu" />
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </StackPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Dubai Bold" size="17.0" />
+               </font>
+            </Text>
+            <StackPane GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <children>
+                  <TableView fx:id="notificationsTableView" editable="true" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="idNotificationTableColumn" editable="false" prefWidth="56.800018310546875" resizable="false" style="-fx-alignment: CENTER;" text="ID" />
+                        <TableColumn fx:id="messageNotificationTableColumn" prefWidth="554.3999328613281" resizable="false" style="-fx-alignment: CENTER;" text="Message" />
+                        <TableColumn fx:id="dateTimeNotificationTableColumn" minWidth="0.0" prefWidth="188.0001220703125" resizable="false" style="-fx-alignment: CENTER;" text="Sent at" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="notificationsContextMenu" />
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

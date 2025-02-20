@@ -1,0 +1,10 @@
+module:hr.ekufrin.training
+hr.ekufrin.training
+hr.ekufrin.training.controller
+hr.ekufrin.training.enums
+hr.ekufrin.training.exception
+hr.ekufrin.training.generics
+hr.ekufrin.training.interfaces
+hr.ekufrin.training.model
+hr.ekufrin.training.repository
+hr.ekufrin.training.util

@@ -1,0 +1,21 @@
+#################################################
+Feedbacks statistics:
+Positive feedbacks: 2
+Negative feedbacks: 0
+#################################################
+Feedback id: 7
+Training session: Snowboarding
+Training session date & location : 19.02.2025. 12:20 @ Kranjska Gora
+Rating (1-5): 5
+Feedback type: Positive :)
+Comment: ### No comment given ###
+Feedback given @ 20.02.2025. 10:56
+-------------------------------------------------
+Feedback id: 6
+Training session: Ping pong
+Training session date & location : 19.02.2025. 09:50 @ Zdihovo
+Rating (1-5): 4
+Feedback type: Positive :)
+Comment: ### No comment given ###
+Feedback given @ 12.02.2025. 17:31
+-------------------------------------------------

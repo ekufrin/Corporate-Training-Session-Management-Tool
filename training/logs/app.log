@@ -1,0 +1,2 @@
+20.02.2025 10:56:22 [ERROR] [JavaFX Application Thread] h.e.t.HelloApplication [RegistrationRepository.java:58] - User Ivo Gavric already joined session 14
+20.02.2025 10:56:29 [ERROR] [JavaFX Application Thread] h.e.t.HelloApplication [RegistrationRepository.java:91] - User Ivo Gavric is not registered in session 14

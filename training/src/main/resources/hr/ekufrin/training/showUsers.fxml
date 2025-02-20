@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.ekufrin.training.controller.ShowUsersController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.79998779296875" minWidth="10.0" prefWidth="400.0" />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints maxHeight="124.80000534057618" minHeight="50.0" prefHeight="96.6" vgrow="NEVER" />
+        <RowConstraints maxHeight="185.60001220703126" minHeight="50.0" prefHeight="129.4" vgrow="NEVER" />
+        <RowConstraints maxHeight="495.19999694824213" minHeight="364.7999877929687" prefHeight="373.5999877929687" vgrow="ALWAYS" />
+    </rowConstraints>
+
+    <children>
+      <fx:include source="menuBar.fxml" GridPane.valignment="TOP" />
+
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Users" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+                <Font name="Dubai Bold" size="34.0" />
+            </font>
+        </Text>
+      <StackPane GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <children>
+      
+              <TableView fx:id="usersTableView" prefHeight="400.0" prefWidth="600.0">
+                  <columns>
+                      <TableColumn fx:id="idTableColumn" editable="false" prefWidth="75.0" resizable="false" style="-fx-alignment: CENTER;" text="ID" />
+                      <TableColumn fx:id="firstNameTableColumn" editable="false" prefWidth="160.0" resizable="false" style="-fx-alignment: CENTER;" text="First name" />
+                      <TableColumn fx:id="lastNameTableColumn" editable="false" minWidth="4.00006103515625" prefWidth="166.4000244140625" resizable="false" style="-fx-alignment: CENTER;" text="Last name" />
+                      <TableColumn fx:id="emailTableColumn" editable="false" minWidth="0.0" prefWidth="250.39996337890625" resizable="false" style="-fx-alignment: CENTER;" text="Email" />
+                      <TableColumn fx:id="roleTableColumn" editable="false" prefWidth="147.20001220703125" resizable="false" style="-fx-alignment: CENTER;" text="Role" />
+                  </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="editContextMenuItem" mnemonicParsing="false" text="Edit" />
+                        <MenuItem fx:id="deleteContextMenuItem" mnemonicParsing="false" text="Delete" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+              </TableView>
+         </children>
+      </StackPane>
+
+        <TextField fx:id="searchTextField" alignment="CENTER" promptText="Start typing..." GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="250.0" right="250.0" top="10.0" />
+            </GridPane.margin>
+        </TextField>
+
+        <Button mnemonicParsing="false" onAction="#searchUsers" prefWidth="100.0" text="Search" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="10.0" />
+            </GridPane.margin>
+        </Button>
+    </children>
+</GridPane>

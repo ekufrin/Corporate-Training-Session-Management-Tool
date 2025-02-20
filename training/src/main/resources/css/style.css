@@ -1,0 +1,4 @@
+.table-row-cell:disabled {
+    -fx-opacity: 0.5;
+    -fx-font-style: italic;
+}
