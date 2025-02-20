@@ -11,3 +11,21 @@ Corporate Training Session Management Tool
 •	Database: Training records, employee registrations, feedback logs.
 
 •	Threads: Notify employees of new training sessions, monitor attendance.
+
+
+## Features
+
+- Desktop JavaFX application
+- Spring Boot REST API for using in Android app
+- Android App writen in Java
+
+
+## Screenshots
+
+![Login](https://i.postimg.cc/tJ9k4TXt/login.png)
+
+![Dashboard](https://i.postimg.cc/sXYKzSRg/dashboard-employee.png)
+
+![Session Expired](https://i.postimg.cc/KjQNk2jX/session-expired.png)
+
+
